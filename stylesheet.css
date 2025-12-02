@@ -106,7 +106,71 @@ h2 {
   padding-top: 20px;
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 36px;
+}
+
+/* Name-specific font overrides */
+.name .en {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700; /* bold English name */
+}
+.name .sep {
+  margin: 0 6px;
+  color: #444;
+}
+.name .zh {
+  font-family: 'Songti SC', 'Songti', 'SimSun', 'NSimSun', 'STSong', serif; /* 宋体优先，含跨平台回退 */
+  font-weight: 700; /* bold Chinese name */
+}
+
+/* Intro paragraph uses Times New Roman */
+.intro {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Profile image sizing */
+.profile-img {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Education entries layout */
+.edu-list {
+  display: block;
+}
+.edu-item {
+  display: flex;
+  align-items: center;
+  min-height: 100px; /* slightly reduced for tighter 800px layout */
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+.edu-logo {
+  width: 100px;
+  height: 100px;
+  background: #fff; /* white fill to square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.02) inset;
+  flex: 0 0 100px;
+}
+.edu-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.edu-content {
+  padding-left: 12px;
+  flex: 1 1 auto; /* allow content to fill remaining space */
+  position: relative; /* containing block for absolute .emp-period */
 }
 
 .one {
@@ -139,4 +203,104 @@ span.highlight {
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
+}
+
+/* Remove default page margins to reduce whitespace around content */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Force the top-level container width to 800px to avoid accidental overflow.
+   This uses !important so it overrides inline styles or other rules that
+   might make the page wider than intended. */
+body > table {
+  max-width: 800px !important;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main section headings: Times New Roman, bold, purple underline */
+.main-heading {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  display: inline-block;
+  padding-bottom: 0px; /* make underline touch closer to heading */
+  border-bottom: 3px solid #7b3eb2; /* purple underline */
+  margin-bottom: 4px; /* slightly reduce gap after heading */
+}
+
+/* Employment-specific styles - shared with Education */
+
+/* Shared styling for both Employment and Education entries */
+.employment-list .job-line,
+.edu-list .job-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+.employment-list .emp-org,
+.edu-list .emp-org {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  display: block;
+  margin-right: 8px;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: visible;
+  white-space: normal;
+}
+.employment-list .emp-period,
+.edu-list .emp-period {
+  font-family: 'Times New Roman', Times, serif !important;
+  color: #777;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+/* Shared edu-sub styling for both Employment and Education */
+.employment-list .edu-content .edu-sub,
+.edu-list .edu-content .edu-sub {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 14px;
+  color: #444;
+  margin-top: 6px;
+}
+
+/* Ensure links inside edu-sub (advisor names) use Times New Roman too */
+.employment-list .edu-content .edu-sub a,
+.edu-list .edu-content .edu-sub a {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* Specific advisor name class to ensure Times New Roman and gray color */
+.advisor-name {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+/* Force all links inside education and employment lists to Times New Roman
+   and inherit color (overrides global `a` rule). */
+.edu-list a,
+.employment-list a {
+  font-family: 'Times New Roman', Times, serif !important;
+  /*color: inherit !important;*/
+}
+
+/* Ensure organization names within Employment use Times New Roman */
+.employment-list .edu-content strong {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-weight: 700;
+}
+
+/* Make all text inside Employment use Times New Roman, but keep hierarchy */
+.employment-list .edu-content {
+  font-family: 'Times New Roman', Times, serif !important;
+  color: inherit;
 }
