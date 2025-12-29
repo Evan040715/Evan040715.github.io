@@ -64,13 +64,15 @@
 }
 
 a {
-  color: #1772d0;
+  color: #2663a9;
   text-decoration: none;
 }
 
+/*color: #2569ce;*/
+
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #FE8C00;
   text-decoration: none;
 }
 
@@ -215,7 +217,7 @@ html, body {
    This uses !important so it overrides inline styles or other rules that
    might make the page wider than intended. */
 body > table {
-  max-width: 800px !important;
+  max-width: 900px !important; /* increased from 800px to reduce side margins */
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -223,13 +225,24 @@ body > table {
 
 /* Main section headings: Times New Roman, bold, purple underline */
 .main-heading {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 700;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-weight: 500;
   display: inline-block;
-  padding-bottom: 0px; /* make underline touch closer to heading */
-  border-bottom: 3px solid #7b3eb2; /* purple underline */
-  margin-bottom: 4px; /* slightly reduce gap after heading */
+  line-height: 1.1; /* tight line height to bring text close */
+  padding-bottom: 0px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #276ab1;
+  text-underline-offset: 1px; /* position underline close to baseline */
+  text-decoration-skip-ink: auto; /* skip ink for descenders, creating gaps */
+  margin-bottom: 3px;
 }
+
+/*
+padding-bottom: 0px; /* make underline touch closer to heading 
+border-bottom: 3px solid #276ab1; /* purple underline 
+margin-bottom: 3px; /* slightly reduce gap after heading 
+*/
 
 /* Employment-specific styles - shared with Education */
 
@@ -245,7 +258,7 @@ body > table {
 .edu-list .emp-org {
   font-family: 'Times New Roman', Times, serif !important;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.2;
   display: block;
   margin-right: 8px;
@@ -258,7 +271,7 @@ body > table {
 .edu-list .emp-period {
   font-family: 'Times New Roman', Times, serif !important;
   color: #777;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   white-space: nowrap;
   margin-left: auto;
@@ -269,7 +282,7 @@ body > table {
 .employment-list .edu-content .edu-sub,
 .edu-list .edu-content .edu-sub {
   font-family: 'Times New Roman', Times, serif !important;
-  font-size: 14px;
+  font-size: 16px;
   color: #444;
   margin-top: 6px;
 }
@@ -283,6 +296,7 @@ body > table {
 /* Specific advisor name class to ensure Times New Roman and gray color */
 .advisor-name {
   font-family: 'Times New Roman', Times, serif !important;
+  font-size: 16px;
 }
 
 /* Force all links inside education and employment lists to Times New Roman
@@ -290,6 +304,7 @@ body > table {
 .edu-list a,
 .employment-list a {
   font-family: 'Times New Roman', Times, serif !important;
+  
   /*color: inherit !important;*/
 }
 
