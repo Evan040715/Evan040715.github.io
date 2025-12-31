@@ -258,7 +258,7 @@ margin-bottom: 3px; /* slightly reduce gap after heading
 .edu-list .emp-org {
   font-family: 'Times New Roman', Times, serif !important;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.2;
   display: block;
   margin-right: 8px;
@@ -271,7 +271,7 @@ margin-bottom: 3px; /* slightly reduce gap after heading
 .edu-list .emp-period {
   font-family: 'Times New Roman', Times, serif !important;
   color: #777;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   white-space: nowrap;
   margin-left: auto;
