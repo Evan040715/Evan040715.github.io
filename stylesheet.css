@@ -151,7 +151,7 @@ h2 {
   align-items: center;
   min-height: 100px; /* slightly reduced for tighter 800px layout */
   padding: 6px 0;
-  border-bottom: 1px solid #eee;
+  /*border-bottom: 1px solid #eee;*/
 }
 .edu-logo {
   width: 100px;
@@ -260,18 +260,19 @@ margin-bottom: 3px; /* slightly reduce gap after heading
   font-weight: 700;
   font-size: 18px;
   line-height: 1.2;
-  display: block;
+  display: inline-block;
   margin-right: 8px;
-  flex: 1 1 auto;
   min-width: 0;
   overflow: visible;
   white-space: normal;
 }
+/* Make links inside emp-org only take up text width, not full line */
+
 .employment-list .emp-period,
 .edu-list .emp-period {
   font-family: 'Times New Roman', Times, serif !important;
   color: #777;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   white-space: nowrap;
   margin-left: auto;
