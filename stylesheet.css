@@ -72,7 +72,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #FE8C00;
+  color: #417bbc;
   text-decoration: none;
 }
 
@@ -82,24 +82,24 @@ th,
 tr,
 p,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
 h2 {
   margin: 0;
   font-weight: normal;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 22px;
 }
 
 .papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
 }
@@ -107,7 +107,7 @@ h2 {
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 36px;
 }
 
@@ -125,9 +125,9 @@ h2 {
   font-weight: 700; /* bold Chinese name */
 }
 
-/* Intro paragraph uses Times New Roman */
+/* Intro paragraph */
 .intro {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -145,6 +145,8 @@ h2 {
 /* Education entries layout */
 .edu-list {
   display: block;
+  margin-bottom: -10px; /* 控制列表底部间距 */
+  margin-top: 5px; /* 控制列表顶部间距 */
 }
 .edu-item {
   display: flex;
@@ -223,9 +225,9 @@ body > table {
   margin-right: auto;
 }
 
-/* Main section headings: Times New Roman, bold, purple underline */
+/* Main section headings */
 .main-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
   display: inline-block;
   line-height: 1.1; /* tight line height to bring text close */
@@ -237,6 +239,7 @@ body > table {
   text-decoration-skip-ink: auto; /* skip ink for descenders, creating gaps */
   margin-bottom: 3px;
 }
+
 
 /*
 padding-bottom: 0px; /* make underline touch closer to heading 
@@ -256,9 +259,9 @@ margin-bottom: 3px; /* slightly reduce gap after heading
 }
 .employment-list .emp-org,
 .edu-list .emp-org {
-  font-family: 'Times New Roman', Times, serif !important;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2;
   display: inline-block;
   margin-right: 8px;
@@ -270,9 +273,9 @@ margin-bottom: 3px; /* slightly reduce gap after heading
 
 .employment-list .emp-period,
 .edu-list .emp-period {
-  font-family: 'Times New Roman', Times, serif !important;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   color: #777;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   white-space: nowrap;
   margin-left: auto;
@@ -282,41 +285,62 @@ margin-bottom: 3px; /* slightly reduce gap after heading
 /* Shared edu-sub styling for both Employment and Education */
 .employment-list .edu-content .edu-sub,
 .edu-list .edu-content .edu-sub {
-  font-family: 'Times New Roman', Times, serif !important;
-  font-size: 16px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 15px;
   color: #444;
   margin-top: 6px;
 }
 
-/* Ensure links inside edu-sub (advisor names) use Times New Roman too */
+/* Ensure links inside edu-sub (advisor names) use new font too */
 .employment-list .edu-content .edu-sub a,
 .edu-list .edu-content .edu-sub a {
-  font-family: 'Times New Roman', Times, serif !important;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
 
-/* Specific advisor name class to ensure Times New Roman and gray color */
+/* Specific advisor name class */
 .advisor-name {
-  font-family: 'Times New Roman', Times, serif !important;
-  font-size: 16px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 15px;
 }
 
-/* Force all links inside education and employment lists to Times New Roman
-   and inherit color (overrides global `a` rule). */
+/* Force all links inside education and employment lists to use new font */
 .edu-list a,
 .employment-list a {
-  font-family: 'Times New Roman', Times, serif !important;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   
   /*color: inherit !important;*/
 }
 
-/* Ensure organization names within Employment use Times New Roman */
+/* Ensure organization names within Employment use new font */
 .employment-list .edu-content strong {
-  font-family: 'Times New Roman', Times, serif !important;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   font-weight: 700;
 }
 
-/* Make all text inside Employment use Times New Roman, but keep hierarchy */
+/* Make all text inside Employment use new font, but keep hierarchy */
 .employment-list .edu-content {
-  font-family: 'Times New Roman', Times, serif !important;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   color: inherit;
+}
+
+/* Award list styling */
+
+.award-list {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 8px;
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.award-item {
+  margin-bottom: 4px;
+  color: #000;
+  margin-left: 1.2em; /* 只给文本内容留出空间，点会在左边 */
+  padding-left: 0;
+}
+.award-item strong {
+  font-weight: 700;
 }
