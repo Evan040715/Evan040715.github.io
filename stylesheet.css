@@ -115,14 +115,17 @@ h2 {
 .name .en {
   font-family: 'Times New Roman', Times, serif;
   font-weight: 700; /* bold English name */
+  font-size: 32px;
 }
 .name .sep {
+  font-size: 32px;
   margin: 0 6px;
   color: #444;
 }
 .name .zh {
   font-family: 'Songti SC', 'Songti', 'SimSun', 'NSimSun', 'STSong', serif; /* 宋体优先，含跨平台回退 */
   font-weight: 700; /* bold Chinese name */
+  font-size: 32px;
 }
 
 /* Intro paragraph */
@@ -131,6 +134,11 @@ h2 {
   font-size: 16px;
   line-height: 1.5;
 }
+/* Make links inside intro the same size as intro text */
+.intro a {
+  font-size: 16px;
+}
+
 
 /* Profile image sizing */
 .profile-img {
@@ -146,13 +154,13 @@ h2 {
 .edu-list {
   display: block;
   margin-bottom: -10px; /* 控制列表底部间距 */
-  margin-top: 5px; /* 控制列表顶部间距 */
+  margin-top: 10px; /* 控制列表顶部间距 */
 }
 .edu-item {
   display: flex;
   align-items: center;
   min-height: 100px; /* slightly reduced for tighter 800px layout */
-  padding: 6px 0;
+  padding: 5px 0;
   /*border-bottom: 1px solid #eee;*/
 }
 .edu-logo {
@@ -330,17 +338,39 @@ margin-bottom: 3px; /* slightly reduce gap after heading
   font-size: 15px;
   line-height: 1.6;
   margin-top: 8px;
+  margin-bottom: -5px;
   margin-left: 0;
   padding-left: 0;
   list-style-type: disc;
   list-style-position: outside;
 }
+
 .award-item {
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   color: #000;
   margin-left: 1.2em; /* 只给文本内容留出空间，点会在左边 */
   padding-left: 0;
 }
 .award-item strong {
   font-weight: 700;
+}
+
+/* Make links inside award items the same size as the text */
+.award-item a {
+  font-size: 15px;
+}
+
+/* Miscellaneous intro paragraph */
+.misc-intro {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+/* Make links inside misc intro the same size as the text */
+.misc-intro a {
+  font-size: 15px;
 }
