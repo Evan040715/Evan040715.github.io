@@ -1,1 +1,1 @@
-This homepage is designed based on  <a href = "https://jonbarron.info/" target="_blank" rel="noopener noreferrer"> Jon Barron's website.Feel free to clone this code for your own personal use.
+This homepage is designed based on  <a href = "https://jonbarron.info/" target="_blank" rel="noopener noreferrer">Jon Barron's</a> website. Feel free to clone this code for your own personal use.
