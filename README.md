@@ -1,1 +1,1 @@
-This is the source code to Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.
+This homepage is designed based on  <a href = "https://jonbarron.info/" target="_blank" rel="noopener noreferrer"> Jon Barron's website.Feel free to clone this code for your own personal use.
