@@ -47,7 +47,7 @@
                   -->
                   <a href="https://github.com/Evan040715/" target="_blank" rel="noopener noreferrer">Github</a> &nbsp;/&nbsp;
                   <a href="https://www.linkedin.com/in/xuanwei-liu-08aba435a/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="data/WeChat.JPG" target="_blank" rel="noopener noreferrer">WeChat</a>
+                  <a href="#" onclick="openWeChatModal(); return false;" style="cursor: pointer;">WeChat</a>
                 </p>
               </td>
               <td style="padding:2.5%;width:28%;max-width:28%">
@@ -258,13 +258,13 @@
             <tr>
               <td>
                 <h2 class="main-heading">Miscellaneous</h2>
-                <p class="misc-intro">Outside the lab, I enjoy immersing myself in music and exploring the outdoors, such as diving🤿, skydiving🪂, and hiking🥾.</p>
+                <p class="misc-intro">Outside the lab, I enjoy immersing myself in music🎵, photography📷, and exploring the outdoors🪂.</p>
                 <ul class="award-list">
                   <li class="award-item">I previously served as the Director of the Modern Music Division at the HITSZ Art Troupe.</li>
                   <li class="award-item">I have been practicing percussion🥁for over 15 years and hold the Grade 10 Certification from the 
                     <a href="http://www.spas.org.cn/" target="_blank" rel="noopener noreferrer">Shanghai Percussion Association</a>. 
                     I have accumulated extensive performance experience and numerous individual awards🏆.
-                    Furthermore, I founded a band that won the First Prize at the <a href="https://hkmusic.hk/en/" target="_blank" rel="noopener noreferrer">Hong Kong International Music Festival🎵</a>.</li>
+                    Furthermore, I founded a band that won the First Prize at the <a href="https://hkmusic.hk/en/" target="_blank" rel="noopener noreferrer">Hong Kong International Music Festival🎼</a>.</li>
                 </ul>
               </td>
             </tr>
@@ -277,7 +277,7 @@
               <td style="padding:0px">
                 <br>
                 <p style="text-align:center;font-size:small;">
-                  This homepage is designed based on  <a href = "https://jonbarron.info/"> Jon Barron's</a> website.
+                  This homepage is designed based on  <a href = "https://jonbarron.info/" target="_blank" rel="noopener noreferrer"> Jon Barron's</a> website.
                 </p>
               </td>
             </tr>
@@ -285,5 +285,38 @@
         </td>
       </tr>
     </table>
+
+    <!-- WeChat QR Code Modal -->
+    <div id="wechatModal" class="wechat-modal" onclick="closeWeChatModal(event)">
+      <div class="wechat-modal-content">
+        <span class="wechat-modal-close" onclick="closeWeChatModal(event)">&times;</span>
+        <img src="data/WeChat.JPG" alt="WeChat QR Code" class="wechat-modal-image">
+      </div>
+    </div>
+
+    <script>
+      function openWeChatModal() {
+        document.getElementById('wechatModal').style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+
+      function closeWeChatModal(event) {
+        // Only close if clicking the overlay background or close button, not the image itself
+        if (event.target.id === 'wechatModal' || event.target.classList.contains('wechat-modal-close')) {
+          document.getElementById('wechatModal').style.display = 'none';
+          document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+      }
+
+      // Close modal when pressing Escape key
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          const modal = document.getElementById('wechatModal');
+          if (modal.style.display === 'block') {
+            closeWeChatModal({ target: { id: 'wechatModal' } });
+          }
+        }
+      });
+    </script>
   </body>
 </html>
