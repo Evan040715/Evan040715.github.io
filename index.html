@@ -9,12 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=4">
-    
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=7">
   </head>
 
   <body>
-    <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <!-- Fixed Top Navigation Bar -->
+    <nav class="top-navbar">
+      <div class="top-navbar-container">
+        <div class="top-navbar-nav">
+          <a href="#home">Home</a>
+          <a href="#News">News</a>
+          <a href="#research">Research</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#employment">Employment</a>
+          <a href="#awards">Awards</a>
+          <a href="#misc">Misc</a>
+        </div>
+      </div>
+    </nav>
+
+    <table id="home" style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -35,18 +50,18 @@
                   I am currently advised by <a href="https://linsats.github.io/" target="_blank" rel="noopener noreferrer">Prof. Lin Shao</a> at the 
                   NUS LinS Lab and <a href="https://scholar.google.com/citations?user=1t1iV1AAAAAJ&hl=zh-CN&oi=ao" target="_blank" rel="noopener noreferrer">Prof. Yongquan Chen</a> at 
                   <a href="https://airs.cuhk.edu.cn/en" target="_blank" rel="noopener noreferrer">AIRS</a>. 
-                  Previously, I was a research assistant at the <a href="https://pwalclab.com/public/index.php?title=Main_Page" target="_blank" rel="noopener noreferrer">Piecewise Affine Learning & Control Lab</a>, advised by <a href="https://scholar.google.com/citations?hl=zh-CN&user=bsD6IowAAAAJ" target="_blank" rel="noopener noreferrer">Prof. Jun Xu</a>. I received my B.Eng. in Automation from <a href="http://en.hitsz.edu.cn/" target="_blank" rel="noopener noreferrer">Harbin Institute of Technology, Shenzhen(HITSZ)</a>. 
+                  Previously, I was a research assistant at the <a href="https://pwalclab.com/public/index.php?title=Main_Page" target="_blank" rel="noopener noreferrer">Piecewise Affine Learning & Control Lab</a>, advised by <a href="https://scholar.google.com/citations?hl=zh-CN&user=bsD6IowAAAAJ" target="_blank" rel="noopener noreferrer">Prof. Jun Xu</a>. I received my B.Eng. in Automation from <a href="http://en.hitsz.edu.cn/" target="_blank" rel="noopener noreferrer">Harbin Institute of Technology, Shenzhen (HITSZ)</a>. 
                   
                 </p>
                 <p style="text-align:center">
-                  <a href="mailto:1928447690@qq.com">Email</a> &nbsp;/&nbsp;
+                  <a href="mailto:zerthry@gmail.com">Email</a> &nbsp;/&nbsp;
                   <a href="data/JonBarron-CV.pdf" target="_blank" rel="noopener noreferrer">CV</a> &nbsp;/&nbsp;
                   <a href="data/JonBarron-CV.pdf" target="_blank" rel="noopener noreferrer">Google Scholar</a> &nbsp;/&nbsp;
                   <!--
                   <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp;
                   -->
                   <a href="https://github.com/Evan040715/" target="_blank" rel="noopener noreferrer">Github</a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/xuanwei-liu-08aba435a/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;/&nbsp;
+                  <a href="https://x.com/Xuanwei_Liu/" target="_blank" rel="noopener noreferrer">X</a> &nbsp;/&nbsp;
                   <a href="#" onclick="openWeChatModal(); return false;" style="cursor: pointer;">WeChat</a>
                 </p>
               </td>
@@ -55,10 +70,25 @@
               </td>
             </tr>
           </tbody></table>
+
+
+          <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+            <tr>
+              <td>
+                <h2 id="News" class="main-heading">News (To be supplemented)</h2>
+                <ul class="award-list">
+                  <li class="award-item"><strong>[2026/06]</strong> 🎉 I'm graduated from HITSZ!</li>
+
+                </ul>
+              </td>
+            </tr>
+          </tbody></table>
+
+
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2 class="main-heading">Research</h2>
+                <h2 id="research" class="main-heading">Research (To be supplemented)</h2>
                 <p>
                   I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Some papers are <span class="highlight">highlighted</span>.
                 </p>
@@ -120,7 +150,7 @@
           <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
             <tr>
               <td>
-                <h2 class="main-heading">Education</h2>
+                <h2 id="education" class="main-heading">Education</h2>
                 <!-- Add your education entries below as <p> or <ul><li>...</li></ul> -->
                 <div class="edu-list">
                   <div class="edu-item">
@@ -154,7 +184,7 @@
           <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
             <tr>
               <td>
-                <h2 class="main-heading">Experience</h2>
+                <h2 id="experience" class="main-heading">Experience</h2>
                 <!-- Add your research / project experience entries here -->
                 <div class="edu-list">
                   <!-- Example experience entry - replace with your actual experiences -->
@@ -206,7 +236,7 @@
           <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
             <tr>
               <td>
-                <h2 class="main-heading">Employment</h2>
+                <h2 id="employment" class="main-heading">Employment</h2>
                 <!-- Employment entries: use same layout as Education (left square logo, right content) -->
                 <div class="edu-list employment-list">
                   <div class="edu-item">
@@ -241,7 +271,7 @@
           <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
             <tr>
               <td>
-                <h2 class="main-heading">Awards</h2>
+                <h2 id="awards" class="main-heading">Awards</h2>
                 <ul class="award-list">
                   <li class="award-item"><strong>2024:</strong> HITSZ Academic Scholarship</li>
                   <li class="award-item"><strong>2024:</strong> Outstanding Student of the Year 2023-2024</li>
@@ -257,7 +287,7 @@
           <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
             <tr>
               <td>
-                <h2 class="main-heading">Miscellaneous</h2>
+                <h2 id="misc" class="main-heading">Miscellaneous</h2>
                 <p class="misc-intro">Outside the lab, I enjoy immersing myself in music🎵, photography📷, and exploring the outdoors🪂.</p>
                 <ul class="award-list">
                   <li class="award-item">I previously served as the Director of the Modern Music Division at the HITSZ Art Troupe.</li>
