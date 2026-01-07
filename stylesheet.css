@@ -582,189 +582,181 @@ h2.main-heading,
 }
 
 /* ============================================
-   Mobile Responsive Layout Override
-   Comprehensive mobile fixes for table-based layout
+   Mobile Responsive - Desktop Layout Scaled Down
+   Keep desktop layout but scale down for mobile
    ============================================ */
 
 @media screen and (max-width: 768px) {
-  /* 1. Layout Reset - Force tables to stack vertically */
-  table,
-  tbody,
-  tr {
-    display: block !important;
-    width: 100% !important;
-  }
-
-  td {
-    display: block !important;
-    width: 100% !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-
-  /* Ensure main container respects padding */
+  /* Keep table layout but reduce overall size and padding */
+  
+  /* Main container - reduce max-width and add side padding */
   body > table {
-    padding-left: 0;
-    padding-right: 0;
+    max-width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
-  /* 2. Profile Image - Center and resize */
-  .profile-img {
-    max-width: 200px !important;
-    width: 200px !important;
-    margin: 20px auto !important;
-    display: block;
+  /* Keep table structure but reduce cell padding */
+  td {
+    padding: 8px 5px !important;
   }
 
-  /* Center profile image container */
-  td[style*="width:28%"],
+  /* Profile section - keep two columns but reduce sizes */
   td[style*="width:72%"] {
-    width: 100% !important;
-    padding: 15px !important;
-    text-align: center;
+    width: 72% !important;
+    padding: 1.5% !important;
+    vertical-align: middle !important;
   }
 
-  /* 3. Typography - Name and heading adjustments */
+  td[style*="width:28%"] {
+    width: 28% !important;
+    padding: 1.5% !important;
+    vertical-align: middle !important;
+  }
+
+  /* Typography - Scale down fonts proportionally */
+  body, td, th, tr, p, a {
+    font-size: 12px !important;
+  }
+
+  strong {
+    font-size: 12px !important;
+  }
+
   .name {
-    font-size: 28px !important;
-    text-align: center !important;
+    font-size: 22px !important;
     padding-top: 10px;
   }
 
   .name .en,
   .name .zh {
-    font-size: 26px !important;
+    font-size: 20px !important;
   }
 
   .name .sep {
-    font-size: 26px !important;
+    font-size: 20px !important;
+    margin: 0 4px;
   }
 
-  /* Center intro text on mobile */
   .intro {
-    text-align: left;
-    padding: 0 5px;
+    font-size: 12px !important;
+    line-height: 1.4;
   }
 
-  /* 4. Navigation Bar - Horizontal scrollable menu */
+  .intro a {
+    font-size: 12px !important;
+  }
+
+  h2, .main-heading {
+    font-size: 16px !important;
+  }
+
+  .papertitle {
+    font-size: 12px !important;
+  }
+
+  /* Profile image - smaller but keep aspect ratio */
+  .profile-img {
+    max-width: 120px !important;
+    width: 100% !important;
+    height: auto;
+  }
+
+  /* Navigation Bar - Horizontal scrollable (keep this) */
   .top-navbar-nav {
     flex-wrap: nowrap !important;
     overflow-x: auto;
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    scrollbar-width: none; /* Firefox - hide scrollbar */
-    -ms-overflow-style: none; /* IE/Edge - hide scrollbar */
-    gap: 20px !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 16px !important;
     padding-bottom: 5px;
   }
 
-  /* Hide scrollbar for Chrome, Safari, Opera */
   .top-navbar-nav::-webkit-scrollbar {
     display: none;
   }
 
-  /* Prevent text selection when scrolling */
-  .top-navbar-nav {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
   .top-navbar-nav a {
-    flex-shrink: 0; /* Prevent links from shrinking */
+    flex-shrink: 0;
     white-space: nowrap;
+    font-size: 13px !important;
   }
 
-  /* 5. Education/Employment Lists - Stack vertically */
+  /* Education/Employment - Keep horizontal layout but smaller */
   .edu-item {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding: 15px 0 !important;
-    min-height: auto !important;
+    min-height: 70px !important;
+    padding: 4px 0 !important;
   }
 
   .edu-logo {
-    width: 80px !important;
-    height: 80px !important;
-    flex: 0 0 80px !important;
-    margin-bottom: 12px;
-    margin-left: 0;
+    width: 70px !important;
+    height: 70px !important;
+    flex: 0 0 70px !important;
   }
 
   .edu-content {
-    padding-left: 0 !important;
-    width: 100%;
-  }
-
-  /* Job line - stack organization and date vertically */
-  .job-line {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
+    padding-left: 8px !important;
   }
 
   .emp-org,
   .edu-list .emp-org,
   .employment-list .emp-org {
-    margin-right: 0 !important;
-    margin-bottom: 4px;
-    width: 100%;
+    font-size: 13px !important;
   }
 
   .emp-period,
   .edu-list .emp-period,
   .employment-list .emp-period {
-    margin-left: 0 !important;
-    margin-top: 0;
-    white-space: normal;
+    font-size: 12px !important;
   }
 
-  /* 6. Padding - Add side padding to prevent edge touching */
-  body {
-    padding-left: 0;
-    padding-right: 0;
+  .edu-sub,
+  .employment-list .edu-content .edu-sub,
+  .edu-list .edu-content .edu-sub {
+    font-size: 12px !important;
   }
 
-  body > table > tbody > tr > td {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+  /* Job line - keep horizontal but allow wrapping */
+  .job-line {
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
-  /* Table padding adjustments */
+  /* Paper images - smaller */
+  .one,
+  .two {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  /* Award list - smaller font */
+  .award-list {
+    font-size: 12px !important;
+  }
+
+  .award-item {
+    font-size: 12px !important;
+  }
+
+  .misc-intro {
+    font-size: 12px !important;
+  }
+
+  /* Reduce padding in various sections */
   table[style*="padding:16px"] td,
   table td[style*="padding:16px"] {
-    padding: 12px 15px !important;
+    padding: 10px 8px !important;
   }
 
   table[style*="padding:2.5%"] td,
   table td[style*="padding:2.5%"] {
-    padding: 12px 15px !important;
+    padding: 1.5% !important;
   }
 
-  /* Paper image adjustments */
-  .one,
-  .two {
-    width: 140px !important;
-    height: 140px !important;
-    margin: 0 auto;
-  }
-
-  /* Ensure all headings have proper spacing */
-  h2.main-heading {
-    margin-top: 20px;
-    margin-bottom: 12px;
-  }
-
-  /* Award list adjustments */
-  .award-list {
-    margin-left: 1.2em;
-    padding-right: 5px;
-  }
-
-  /* Center alignment for profile section links */
-  p[style*="text-align:center"] {
-    text-align: center !important;
-    padding: 10px 5px;
+  /* Table spacing adjustments */
+  table[style*="border-spacing:0px 10px"] {
+    border-spacing: 0px 5px !important;
   }
 }
