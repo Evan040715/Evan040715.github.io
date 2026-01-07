@@ -153,7 +153,7 @@ h2 {
 /* Education entries layout */
 .edu-list {
   display: block;
-  margin-bottom: -10px; /* 控制列表底部间距 */
+  margin-bottom: -20px; /* 控制列表底部间距 */
   margin-top: 10px; /* 控制列表顶部间距 */
 }
 .edu-item {
@@ -221,6 +221,8 @@ span.highlight {
 html, body {
   margin: 0;
   padding: 0;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Force the top-level container width to 800px to avoid accidental overflow.
