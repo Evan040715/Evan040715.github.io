@@ -164,7 +164,7 @@ h2 {
   display: flex;
   align-items: center;
   min-height: 100px; /* slightly reduced for tighter 800px layout */
-  padding: 8px 0;
+  padding: 10px 0;
   /*border-bottom: 1px solid #eee;*/
 }
 .education-logo {
@@ -201,7 +201,7 @@ h2 {
   display: flex;
   align-items: center;
   min-height: 100px; /* slightly reduced for tighter 800px layout */
-  padding: 8px 0;
+  padding: 10px 0;
   /*border-bottom: 1px solid #eee;*/
 }
 .experience-logo {
@@ -238,7 +238,7 @@ h2 {
   display: flex;
   align-items: center;
   min-height: 100px; /* slightly reduced for tighter 800px layout */
-  padding: 8px 0;
+  padding: 10px 0;
   /*border-bottom: 1px solid #eee;*/
 }
 .employment-logo {
@@ -390,8 +390,8 @@ margin-bottom: 3px; /* slightly reduce gap after heading
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   font-size: 15px;
   color: #444;
-  margin-top: 0px;
-  margin-bottom: 2px;
+  margin-top: 2px;
+  margin-bottom:2px;
 }
 .education-list .education-content .edu-sub a {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
@@ -452,7 +452,7 @@ margin-bottom: 3px; /* slightly reduce gap after heading
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   font-size: 15px;
   color: #444;
-  margin-top: 0px;
+  margin-top: 2px;
   margin-bottom: 2px;
 }
 .experience-list .experience-content .edu-sub a {
@@ -514,7 +514,7 @@ margin-bottom: 3px; /* slightly reduce gap after heading
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   font-size: 15px;
   color: #444;
-  margin-top: 0px;
+  margin-top: 2px;
   margin-bottom: 2px;
 }
 .employment-list .employment-content .edu-sub a {
