@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon/favicon.ico?v=2.0" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css?v=10">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
 
   <body>
@@ -25,6 +26,9 @@
           <a href="#employment">Employment</a>
           <a href="#awards">Awards</a>
           <a href="#misc">Misc</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <span class="theme-toggle-icon" id="themeIcon">☀</span>
+          </button>
         </div>
       </div>
     </nav>
@@ -368,6 +372,63 @@
           }
         }
       });
+
+      // Theme toggle functionality
+      (function() {
+        const themeToggle = document.getElementById('themeToggle');
+        let themeIcon = document.getElementById('themeIcon');
+        const body = document.body;
+        
+        // Function to set sun icon (text)
+        function setSunIcon() {
+          const icon = document.getElementById('themeIcon');
+          if (icon.tagName === 'I') {
+            icon.outerHTML = '<span class="theme-toggle-icon" id="themeIcon">☀</span>';
+            themeIcon = document.getElementById('themeIcon');
+          } else {
+            icon.textContent = '☀';
+          }
+        }
+        
+        // Function to set moon icon (Font Awesome)
+        function setMoonIcon() {
+          const icon = document.getElementById('themeIcon');
+          if (icon.tagName === 'SPAN') {
+            icon.outerHTML = '<i class="theme-toggle-icon fa-solid fa-moon" id="themeIcon"></i>';
+            themeIcon = document.getElementById('themeIcon');
+          } else {
+            icon.className = 'theme-toggle-icon fa-solid fa-moon';
+          }
+        }
+        
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        
+        // Apply saved theme on page load
+        if (currentTheme === 'dark') {
+          body.classList.add('dark-theme');
+          setMoonIcon();
+        } else {
+          body.classList.remove('dark-theme');
+          setSunIcon();
+        }
+        
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', function() {
+          if (body.classList.contains('dark-theme')) {
+            body.classList.remove('dark-theme');
+            setSunIcon();
+            localStorage.setItem('theme', 'light');
+          } else {
+            body.classList.add('dark-theme');
+            setMoonIcon();
+            localStorage.setItem('theme', 'dark');
+          }
+        });
+      })();
+
+
+      
     </script>
   </body>
 </html>
