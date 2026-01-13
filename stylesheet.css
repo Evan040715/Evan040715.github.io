@@ -335,7 +335,7 @@ body > table {
 .main-heading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  color: #111;
+  color: #222;
   display: inline-block;
   line-height: 1.1; /* tight line height to bring text close */
   padding-bottom: 0px;
@@ -368,7 +368,7 @@ margin-bottom: 3px; /* slightly reduce gap after heading
 .education-list .emp-org {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   font-weight: 700;
-  color: #444;
+  color: #333;
   font-size: 16px;
   line-height: 1.2;
   display: inline-block;
@@ -432,7 +432,7 @@ margin-bottom: 3px; /* slightly reduce gap after heading
 .experience-list .emp-org {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   font-weight: 700;
-  color: #444;
+  color: #333;
   font-size: 16px;
   line-height: 1.2;
   display: inline-block;
@@ -497,7 +497,7 @@ margin-bottom: 3px; /* slightly reduce gap after heading
 .employment-list .emp-org {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   font-weight: 700;
-  color: #444;
+  color: #333;
   font-size: 16px;
   line-height: 1.2;
   display: inline-block;
