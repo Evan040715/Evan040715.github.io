@@ -104,8 +104,72 @@ h2 {
 
 .papertitle {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 19px;
+  color: #333;
   font-weight: 700;
+  line-height: 1.5;
+}
+
+/* Paper authors */
+.paper-authors {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Paper venue (conference/journal) */
+.paper-venue {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #104eca;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  display: inline-block;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* Venue badge highlight (for conference abbreviation and year) */
+.venue-badge {
+  display: inline-block;
+  background-color: #b8d0ff;
+  color: #104eca;
+  padding: 0px 8px;
+  border-radius: 25px;
+  font-weight: 700;
+  margin-right: 8px;
+  box-shadow: 0 1px 3px rgba(88, 44, 131, 0.15);
+  line-height: 1.5; /* 使用较小的行高，让徽章更紧凑 */
+}
+
+/* Paper links */
+.paper-links {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.paper-links a {
+  font-size: 16px;
+}
+
+/* Paper TL;DR section */
+.paper-tldr {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #999;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+
+.paper-tldr strong {
+  font-size: 16px; /* 确保 strong 标签使用相同的字体大小 */
+  font-weight: 700; /* 使用加粗，与全局 strong 标签一致 */
 }
 
 .name {
@@ -323,7 +387,7 @@ html, body {
    This uses !important so it overrides inline styles or other rules that
    might make the page wider than intended. */
 body > table {
-  max-width: 950px !important; /* increased from 800px to reduce side margins */
+  max-width: 930px !important; /* increased from 800px to reduce side margins */
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -718,7 +782,7 @@ body {
 
 h2.main-heading,
 #home {
-  scroll-margin-top: 75px;
+  scroll-margin-top: 80px;
 }
 
 /* Fixed Navigation Bar */
@@ -737,16 +801,16 @@ h2.main-heading,
 }
 
 .top-navbar-container {
-  max-width: 900px;
+  max-width: 895px;
   margin: 0px auto;
-  padding: 20px 20px;
+  padding: 18px 20px;
 }
 
 .top-navbar-nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 36px;
+  gap: 30px;
   flex-wrap: wrap;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 30px;
@@ -783,7 +847,6 @@ h2.main-heading,
   justify-content: center;
   line-height: 1;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-family: 'Roboto', 'Segoe UI', Helvetica, Arial, sans-serif;
   font-weight: 700;
   text-decoration: none;
 }
@@ -869,6 +932,10 @@ body.dark-theme h2 {
 }
 
 body.dark-theme .main-heading {
+  color: #ffffff;
+}
+
+body.dark-theme .papertitle {
   color: #ffffff;
 }
 
